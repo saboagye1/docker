@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+LABEL maintainer = "sera@gmail.com"
+RUN apt-get update -y && apt-get instakk apache2 -y
+EXPOSE 80
+CMD ["user/sbin/apache", "-D" "FOREGROUND"]
